@@ -1,40 +1,78 @@
 # Logistic Regression From Scratch
 
-A lightweight Python implementation of logistic regression using gradient descent.
+A Logistic Regression implementation built from scratch using NumPy and Gradient Descent.
 
-## What’s included
+## Features
 
-- `model/LogisticRegression.py`: A simple logistic regression class using NumPy.
-- `.gitignore`: Ignore virtual environment files and Python artifacts.
-- `requirements.txt`: Dependencies for the project.
+* Binary Classification
+* Sigmoid Activation Function
+* Binary Cross Entropy Loss
+* Gradient Descent Optimization
+* Probability Prediction
+* Class Prediction
+* Loss History Tracking
+* Object-Oriented Design
 
-## Setup
+## Project Structure
 
-```bash
-cd logistic-regression-from-scratch
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+logistic-regression-from-scratch/
+
+├── model/
+│   └── LogisticRegression.py
+│
+├── utils/
+│   ├── loss.py
+│   └── metrics.py
+│
+├── experiments/
+│   └── exp1.py
+│
+├── requirements.txt
+│
+└── README.md
+
+## Concepts Implemented
+
+* Logistic Regression
+* Sigmoid Function
+* Binary Classification
+* Binary Cross Entropy Loss
+* Gradient Descent
+* Probability Prediction
+* Model Evaluation
+
+## Usage
+
+```python
+from model.LogisticRegression import LogisticRegression
+
+model = LogisticRegression(
+    learning_rate=0.1,
+    n_iterations=1000
+)
+
+model.fit(X, y)
+
+probabilities = model.predict_proba(X)
+
+predictions = model.predict(X)
 ```
 
-## Run
+## Learning Goals
 
-```bash
-python model/LogisticRegression.py
-```
+This project was built to understand the mathematics and implementation behind Logistic Regression without using machine learning libraries such as scikit-learn.
 
-The script trains a small synthetic dataset and prints training accuracy.
+The implementation focuses on:
 
-## Publish to GitHub
+* Understanding classification
+* Understanding probability outputs
+* Implementing gradient descent from scratch
+* Building reusable machine learning models
+* Preparing for Neural Networks and Deep Learning
 
-1. Create a GitHub repo on your profile.
-2. Add the remote:
-   ```bash
-git remote add origin https://github.com/<your-username>/<repo-name>.git
-```
-3. Push the code:
-   ```bash
-git branch -M main
-git push -u origin main
-```
-# logistic-regression-from-scratch
+## Requirements
+
+* Python
+* NumPy
+* Matplotlib
+
